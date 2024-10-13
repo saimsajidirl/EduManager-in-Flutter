@@ -10,13 +10,13 @@ The application consists of various Dart files categorized into Models, Services
 
 These files define the data structures that the application interacts with.
 
-    Student.dart:
+   Student.dart:
         This file defines a model class named Student.
         Properties:
             name: The name of the student.
             cgpa: The CGPA (Cumulative Grade Point Average) of the student.
 
-    Teacher.dart:
+Teacher.dart:
         This file defines a model class named Teacher.
         Properties:
             name: The name of the teacher.
@@ -28,7 +28,7 @@ These files define the data structures that the application interacts with.
 
 These files provide functionalities for data manipulation and interaction with Firebase for authentication and database services.
 
-    AuthService.dart:
+AuthService.dart:
         Handles user authentication.
         Provides methods to:
             Sign-up a new user.
@@ -36,7 +36,7 @@ These files provide functionalities for data manipulation and interaction with F
             Sign-out the user.
         Uses Firebase Authentication for managing user accounts.
 
-    FireService.dart:
+FireService.dart:
         Handles interactions with Firebase Firestore for storing and fetching data.
         Provides methods to:
             Add student and teacher information.
@@ -46,14 +46,14 @@ These files provide functionalities for data manipulation and interaction with F
 
 These files contain reusable UI components to be used across various screens.
 
-    DashboardCard.dart:
+DashboardCard.dart:
         Defines a reusable widget named DashboardCard.
         Displays information in a card format with:
             A title.
             A value.
             A color for styling.
 
-    IntegratedDashboard.dart:
+ IntegratedDashboard.dart:
         The main screen of the application that shows an overview of the system.
         Contains a dashboard displaying:
             Total teachers.
@@ -63,76 +63,76 @@ These files contain reusable UI components to be used across various screens.
             Overview: Displays the overall statistics.
             Project Summary: Displays detailed project information.
 
-    ProjectDashboard.dart:
+ProjectDashboard.dart:
         Defines a widget named ProjectDashboard.
         Displays a section with a title ("Current Projects") and a list of project statuses.
 
-    StudentsList.dart:
+ StudentsList.dart:
         Defines a widget named StudentsList.
         Displays a list of students using ListView.builder.
 
-    TeachersList.dart:
+  TeachersList.dart:
         Similar to StudentsList, defines a widget for displaying a list of teachers.
 
-    AddStudentDialog.dart (Not shown in the provided code):
+   AddStudentDialog.dart (Not shown in the provided code):
         Likely defines a dialog box for adding new students to the system.
 
 4. Screens
 
 These are the individual screens that users interact with, where the app's logic and UI are presented.
 
-    LoginScreen.dart:
+ LoginScreen.dart:
         Defines the login screen where users can enter their email and password to sign in.
         Connects to AuthService for authentication.
 
-    RegisterScreen.dart:
+  RegisterScreen.dart:
         Defines the registration screen where users can create a new account.
         Also connects to AuthService for account creation.
 
-    StudentStudyManagementScreen.dart:
+  StudentStudyManagementScreen.dart:
         Manages the students within the app.
         Displays a list of students using StudentsList.
         Provides an option to add new students using a dialog box (likely AddStudentDialog).
 
-    TeacherStudyManagementScreen.dart:
+ TeacherStudyManagementScreen.dart:
         Manages the teachers within the app.
         Displays a list of teachers using TeachersList.
         Provides an option to add new teachers using a dialog box (not shown in the provided code).
 
 Application Workflow
 
-    Authentication:
+ Authentication:
         Users can sign in using the LoginScreen or register using the RegisterScreen.
         Authentication is handled through AuthService using Firebase Authentication.
 
-    Dashboard:
+  Dashboard:
         After signing in, users are presented with the IntegratedDashboard, which displays key information about teachers, students, and courses.
         The dashboard provides two sections: Overview and Project Summary.
 
-    Managing Students and Teachers:
+ Managing Students and Teachers:
         Users can switch to the StudentStudyManagementScreen to view and manage students.
         Similarly, the TeacherStudyManagementScreen allows users to manage teachers.
         Each screen uses StudentsList or TeachersList to display data fetched from Firebase Firestore.
         Users can add new students or teachers using a dialog box (e.g., AddStudentDialog for students).
 
-    Project Management:
+  Project Management:
         ProjectDashboard provides a detailed view of current projects within the institution.
         Users can see project statuses and other relevant details.
 
 Future Enhancements
 
-    Additional Features:
+Additional Features:
         Add features for managing courses, including creating and assigning courses to teachers and students.
         Implement notifications for important updates regarding students, teachers, and projects.
 
-    UI Improvements:
+ UI Improvements:
         Improve user interface designs with more advanced widgets and animations.
         Add more customization options for the dashboard, such as filters and sorting for project summaries.
 
-    Testing:
+  Testing:
         Implement unit and widget tests to ensure the app is functioning correctly and without bugs.
 
-    Performance Optimization:
+   Performance Optimization:
         Optimize data fetching and minimize network requests when fetching students, teachers, and project data.
 
 Conclusion
