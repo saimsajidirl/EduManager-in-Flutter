@@ -1,4 +1,7 @@
 # EduManager In Flutter
+
+![Untitled](https://github.com/user-attachments/assets/1321c5e5-5a9c-40cc-bda4-84ba0a5e899d)
+
 The EDU Manager application is a Flutter-based mobile app designed for managing students, teachers, and projects within an educational institution. The app provides functionalities such as user authentication, managing lists of students and teachers, and displaying key project details on a dashboard.
 
 The app is structured into models, services, widgets, and screens. Each component serves a specific role to ensure smooth interaction and management of the data.
